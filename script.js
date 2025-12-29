@@ -116,6 +116,24 @@ if (bentoItems) {
 }
 
 // ============================================
+// ROTATING TEXT ANIMATION
+// ============================================
+const rotatingTextElements = document.querySelectorAll('.rotating-text');
+
+rotatingTextElements.forEach(element => {
+  const words = element.dataset.words.split(',');
+  let currentWordIndex = 0;
+
+  function updateText() {
+    element.textContent = words[currentWordIndex];
+    currentWordIndex = (currentWordIndex + 1) % words.length;
+  }
+
+  updateText(); // Set initial text
+  setInterval(updateText, 3000); // Change text every 3 seconds
+});
+
+// ============================================
 // INITIALIZE
 // ============================================
 document.addEventListener('DOMContentLoaded', () => {
