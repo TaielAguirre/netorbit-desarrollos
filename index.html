@@ -132,80 +132,151 @@
         </p>
       </div>
 
-      <div class="pricing-bento-card reveal-on-scroll delay-100">
-        <p class="pricing-label">Inversión Única</p>
-        <div class="pricing-amount">$400.000 <span
-            style="font-size: var(--text-xl); color: var(--color-text-muted); font-weight: 500;">ARS</span></div>
-        <p class="pricing-note">Plan "Despegue Digital". Sin mensualidades ocultas.</p>
+      <!-- Pricing Comparison Table -->
+      <div class="pricing-comparison reveal-on-scroll">
+        <div class="comparison-option option-expensive">
+          <span class="tag">❌ Agencia Tradicional</span>
+          <p class="price-strikethrough">$800k - $1.5M</p>
+          <ul class="pricing-features-bad">
+            <li>+ $80k/mes de mantenimiento</li>
+            <li>Demora 2-3 meses</li>
+            <li>No tenés el código</li>
+          </ul>
+        </div>
 
-        <div class="bento-grid">
-          <!-- Item 1: Design -->
-          <div class="bento-item bento-col-6 reveal-on-scroll delay-100">
-            <div class="bento-item-content">
-              <div style="font-size: 2rem; margin-bottom: 0.5rem;">🎨</div>
-              <h3>Diseño de Alta Conversión</h3>
-              <p>Estrategia visual diseñada psicológicamente para guiar al visitante hacia la compra. No es solo
-                "bonito", es eficiente.</p>
-            </div>
+        <div class="comparison-option option-cheap">
+          <span class="tag">⚠️ Plantilla Genérica</span>
+          <p class="price-small">$0 - $50k inicial</p>
+          <ul class="pricing-features-bad">
+            <li>$30k/mes PARA SIEMPRE</li>
+            <li>Parece amateur</li>
+            <li>No escala</li>
+          </ul>
+        </div>
+
+        <div class="comparison-option option-netorbit highlight">
+          <span class="tag best">✅ NetOrbit Studio</span>
+          <p class="price-big">$400.000</p>
+          <p class="price-subtitle">Inversión Única. Tuyo para siempre.</p>
+          <ul class="pricing-features-good">
+            <li>✓ Código 100% profesional</li>
+            <li>✓ Listo en 3 semanas</li>
+            <li>✓ Escalable a futuro</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Value Breakdown -->
+      <div class="value-breakdown reveal-on-scroll delay-100">
+        <h3 style="text-align: center; margin-bottom: var(--space-6); color: var(--color-text-primary);">
+          ¿Qué incluye esa inversión?
+        </h3>
+        <div class="value-grid">
+          <div class="value-item">
+            <span class="value-amount">$120k</span>
+            <span class="value-label">Diseño UX/UI Estratégico</span>
           </div>
-
-          <!-- Item 2: Responsive -->
-          <div class="bento-item bento-col-6 reveal-on-scroll delay-100">
-            <div class="bento-item-content">
-              <div style="font-size: 2rem; margin-bottom: 0.5rem;">📱</div>
-              <h3>Multi-Dispositivo</h3>
-              <p>Experiencia perfecta en celulares, tablets y laptops. Tu web se adapta fluidamente a cualquier
-                pantalla.</p>
-            </div>
+          <div class="value-item">
+            <span class="value-amount">$150k</span>
+            <span class="value-label">Desarrollo Front-End Premium</span>
           </div>
-
-          <!-- Item 3: WhatsApp (Wide) -->
-          <div class="bento-item bento-col-8 reveal-on-scroll delay-200">
-            <div class="bento-item-content">
-              <div style="font-size: 2rem; margin-bottom: 0.5rem;">💬</div>
-              <h3>Integración WhatsApp Business API</h3>
-              <p>Botón flotante inteligente y enlaces directos pre-configurados para cerrar ventas rápido. Reducimos la
-                fricción de contacto a cero.</p>
-            </div>
+          <div class="value-item">
+            <span class="value-amount">$80k</span>
+            <span class="value-label">SEO Técnico + Optimización</span>
           </div>
-
-          <!-- Item 4: SEO -->
-          <div class="bento-item bento-col-4 reveal-on-scroll delay-200">
-            <div class="bento-item-content">
-              <div style="font-size: 2rem; margin-bottom: 0.5rem;">🔍</div>
-              <h3>SEO Técnico</h3>
-              <p>Estructura optimizada para que Google te entienda y te posicione.</p>
-            </div>
+          <div class="value-item">
+            <span class="value-amount">$30k</span>
+            <span class="value-label">Setup Hosting + Dominio</span>
           </div>
-
-          <!-- Item 5: Scalable -->
-          <div class="bento-item bento-col-6 reveal-on-scroll delay-300">
-            <div class="bento-item-content">
-              <div style="font-size: 2rem; margin-bottom: 0.5rem;">🚀</div>
-              <h3>Arquitectura Escalable</h3>
-              <p>Preparado para agregar E-commerce, Blog o CRM a futuro sin tirar todo a la basura.</p>
-            </div>
+          <div class="value-item">
+            <span class="value-amount">$50k</span>
+            <span class="value-label">Capacitación 1-on-1</span>
           </div>
+          <div class="value-item total">
+            <span class="value-amount">$430k</span>
+            <span class="value-label">Valor Total</span>
+          </div>
+        </div>
+        <p
+          style="text-align: center; margin-top: var(--space-4); font-size: var(--text-lg); color: var(--color-accent);">
+          <strong>Tu precio: $400.000</strong> (Ahorrás $30k)
+        </p>
+      </div>
 
-          <!-- Item 6: CTO Direct -->
-          <div class="bento-item bento-col-6 reveal-on-scroll delay-300">
-            <div class="bento-item-content">
-              <div style="font-size: 2rem; margin-bottom: 0.5rem;">🤝</div>
-              <h3>Trato Directo</h3>
-              <p>Sin intermediarios. Hablás directamente con quien construye la tecnología de tu negocio.</p>
-            </div>
+      <div class="bento-grid">
+        <!-- Item 1: Design -->
+        <div class="bento-item bento-col-6 reveal-on-scroll delay-100">
+          <div class="bento-item-content">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🎨</div>
+            <h3>Diseño de Alta Conversión</h3>
+            <p>Estrategia visual diseñada psicológicamente para guiar al visitante hacia la compra. No es solo
+              "bonito", es eficiente.</p>
           </div>
         </div>
 
+        <!-- Item 2: Responsive -->
+        <div class="bento-item bento-col-6 reveal-on-scroll delay-100">
+          <div class="bento-item-content">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">📱</div>
+            <h3>Multi-Dispositivo</h3>
+            <p>Experiencia perfecta en celulares, tablets y laptops. Tu web se adapta fluidamente a cualquier
+              pantalla.</p>
+          </div>
+        </div>
+
+        <!-- Item 3: WhatsApp (Wide) -->
+        <div class="bento-item bento-col-8 reveal-on-scroll delay-200">
+          <div class="bento-item-content">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">💬</div>
+            <h3>Integración WhatsApp Business API</h3>
+            <p>Botón flotante inteligente y enlaces directos pre-configurados para cerrar ventas rápido. Reducimos la
+              fricción de contacto a cero.</p>
+          </div>
+        </div>
+
+        <!-- Item 4: SEO -->
+        <div class="bento-item bento-col-4 reveal-on-scroll delay-200">
+          <div class="bento-item-content">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🔍</div>
+            <h3>SEO Técnico</h3>
+            <p>Estructura optimizada para que Google te entienda y te posicione.</p>
+          </div>
+        </div>
+
+        <!-- Item 5: Scalable -->
+        <div class="bento-item bento-col-6 reveal-on-scroll delay-300">
+          <div class="bento-item-content">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🚀</div>
+            <h3>Arquitectura Escalable</h3>
+            <p>Preparado para agregar E-commerce, Blog o CRM a futuro sin tirar todo a la basura.</p>
+          </div>
+        </div>
+
+        <!-- Item 6: CTO Direct -->
+        <div class="bento-item bento-col-6 reveal-on-scroll delay-300">
+          <div class="bento-item-content">
+            <div style="font-size: 2rem; margin-bottom: 0.5rem;">🤝</div>
+            <h3>Trato Directo</h3>
+            <p>Sin intermediarios. Hablás directamente con quien construye la tecnología de tu negocio.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Final con Urgencia -->
+      <div class="cta-pricing reveal-on-scroll delay-200">
         <a href="https://wa.me/5492914476665?text=Hola!%20Me%20interesa%20el%20plan%20Despegue%20Digital.%20Quiero%20saber%20m%C3%A1s."
           class="btn btn-primary btn-large btn-whatsapp" style="width: 100%; max-width: 400px;" target="_blank"
           rel="noopener noreferrer">
-          Solicitar Disponibilidad
+          Agendar Consultoría Gratis
         </a>
 
         <p
-          style="text-align: center; margin-top: var(--space-4); font-size: var(--text-sm); color: var(--color-text-muted);">
-          Cupos limitados por mes para garantizar calidad.
+          style="text-align: center; margin-top: var(--space-3); font-size: var(--text-sm); color: var(--color-text-muted);">
+          ⚡ Solo 3 cupos disponibles este mes
+        </p>
+        <p
+          style="text-align: center; margin-top: var(--space-2); font-size: var(--text-xs); color: var(--color-text-muted);">
+          🎁 Primeros 5 clientes: Hosting gratis por 1 año (valor: $45.000)
         </p>
       </div>
     </div>
