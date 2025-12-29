@@ -213,6 +213,80 @@ body {
     radial-gradient(circle at 15% 50%, rgba(59, 130, 246, 0.08) 0%, transparent 25%),
     radial-gradient(circle at 85% 30%, rgba(14, 165, 233, 0.08) 0%, transparent 25%);
   background-attachment: fixed;
+  overflow-x: hidden;
+  /* Prevent horizontal scroll from gradients */
+}
+
+/* ============================================
+   AURORA BACKGROUND
+   ============================================ */
+.aurora-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%);
+  filter: blur(80px);
+  animation: auroraMove 20s infinite alternate;
+  pointer-events: none;
+}
+
+.aurora-blob-1 {
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 50vw;
+  height: 50vw;
+  background: rgba(14, 165, 233, 0.2);
+  /* Sky Blue */
+  border-radius: 50%;
+  filter: blur(100px);
+  animation: floatBlob 25s infinite alternate;
+}
+
+.aurora-blob-2 {
+  position: absolute;
+  bottom: -10%;
+  right: -10%;
+  width: 60vw;
+  height: 60vw;
+  background: rgba(59, 130, 246, 0.15);
+  /* Electric Blue */
+  border-radius: 50%;
+  filter: blur(100px);
+  animation: floatBlobReverse 30s infinite alternate;
+}
+
+@keyframes auroraMove {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes floatBlob {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(100px, 100px) rotate(20deg);
+  }
+}
+
+@keyframes floatBlobReverse {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-100px, -100px) rotate(-20deg);
+  }
 }
 
 /* ============================================
@@ -549,6 +623,116 @@ section {
   font-size: var(--text-sm);
   font-weight: 700;
   box-shadow: 0 0 10px rgba(59, 130, 246, 0.4);
+}
+
+/* ============================================
+   BENTO GRID - Modern Layout
+   ============================================ */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--space-4);
+  max-width: var(--max-width);
+  margin: 0 auto 3rem auto;
+}
+
+.bento-item {
+  position: relative;
+  background: rgba(30, 41, 59, 0.4);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  /* Spotlight variables */
+  --x: 0px;
+  --y: 0px;
+}
+
+.bento-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(800px circle at var(--x) var(--y),
+      rgba(59, 130, 246, 0.15),
+      transparent 40%);
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.bento-item:hover::before {
+  opacity: 1;
+}
+
+.bento-item-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bento-item h3 {
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-2);
+  color: var(--color-text-primary);
+}
+
+.bento-item p {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+/* Bento Sizes */
+.bento-col-4 {
+  grid-column: span 4;
+}
+
+.bento-col-6 {
+  grid-column: span 6;
+}
+
+.bento-col-8 {
+  grid-column: span 8;
+}
+
+.bento-col-12 {
+  grid-column: span 12;
+}
+
+@media (max-width: 900px) {
+  .bento-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bento-col-4,
+  .bento-col-6,
+  .bento-col-8,
+  .bento-col-12 {
+    grid-column: span 12;
+  }
+}
+
+/* Pricing Upgrade in Bento Style */
+.pricing-bento-card {
+  grid-column: span 12;
+  background: linear-gradient(180deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.9) 100%);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.1);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  margin-top: var(--space-8);
+  text-align: center;
+  position: relative;
 }
 
 /* ============================================

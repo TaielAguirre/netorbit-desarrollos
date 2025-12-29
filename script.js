@@ -76,7 +76,7 @@ whatsappButtons.forEach(button => {
 });
 
 // ============================================
-// ANIMATION OBSERVER
+// ANIMATIONS OBSERVER
 // ============================================
 const observerOptions = {
   root: null,
@@ -93,9 +93,27 @@ const observer = new IntersectionObserver((entries, observer) => {
   });
 }, observerOptions);
 
-document.querySelectorAll('.reveal-on-scroll').forEach((el) => {
-  observer.observe(el);
+document.querySelectorAll('.reveal-on-scroll').forEach(element => {
+  observer.observe(element);
 });
+
+// ============================================
+// SPOTLIGHT EFFECT (Bento Grid)
+// ============================================
+const bentoItems = document.querySelectorAll('.bento-item');
+
+if (bentoItems) {
+  document.addEventListener('mousemove', (e) => {
+    bentoItems.forEach(item => {
+      const rect = item.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      item.style.setProperty('--x', `${x}px`);
+      item.style.setProperty('--y', `${y}px`);
+    });
+  });
+}
 
 // ============================================
 // INITIALIZE
