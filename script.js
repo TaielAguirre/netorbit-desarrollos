@@ -76,6 +76,30 @@ whatsappButtons.forEach(button => {
 });
 
 // ============================================
+// CONVERSION TRACKING
+// ============================================
+const whatsappButtons = document.querySelectorAll('.btn-whatsapp');
+
+whatsappButtons.forEach(button => {
+  button.addEventListener('click', function () {
+    // Google Ads conversion tracking
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'conversion', {
+        'send_to': 'AW-17840926402/kd3tCPG_ptkbEMLdm7tC',
+        'value': 1.0,
+        'currency': 'ARS'
+      });
+      console.log('Google Ads conversion tracked');
+    }
+
+    // Meta Pixel (if configured later)
+    if (typeof fbq !== 'undefined') {
+      fbq('track', 'Lead');
+    }
+  });
+});
+
+// ============================================
 // ANIMATIONS OBSERVER
 // ============================================
 const observerOptions = {
