@@ -20,6 +20,37 @@
   <link rel="icon" type="image/svg+xml"
     href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌐</text></svg>">
 
+  <!-- Google tag (gtag.js) - REEMPLAZA G-XXXXXXXXXX con tu ID real -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <!-- Meta Pixel Code - REEMPLAZA con tu PIXEL ID real -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'TU-PIXEL-ID-AQUI');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=TU-PIXEL-ID-AQUI&ev=PageView&noscript=1" />
+  </noscript>
+  <!-- End Meta Pixel Code -->
+
   <!-- Styles -->
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -61,20 +92,20 @@
   <section class="hero">
     <div class="container">
       <div class="hero-content">
-        <span class="hero-label reveal-on-scroll">Premium Software Studio</span>
+        <span class="hero-label reveal-on-scroll">Desarrollo Web Profesional</span>
         <h1 class="reveal-on-scroll delay-100">
-          Elevamos tu negocio con <span id="rotating-text"
-            data-words="ingeniería digital,diseño estratégico,automatización inteligente,tecnología premium">ingeniería
-            digital</span> de alto impacto
+          Tu web que vende mientras dormís <span id="rotating-text"
+            data-words="diseño estratégico,automatización inteligente,tecnología premium,rendimiento optimizado">diseño
+            estratégico</span>
         </h1>
         <p class="hero-subtitle reveal-on-scroll delay-200">
-          Transformamos tu negocio con sistemas web de alto rendimiento. Diseño estratégico, velocidad y automatización
-          para que vendas más sin trabajar el doble.
+          Web profesional de alto rendimiento para emprendedores y PyMEs que quieren escalar. Diseño estratégico,
+          velocidad y automatización para vender más sin trabajar el doble.
         </p>
         <div class="hero-cta reveal-on-scroll delay-300">
-          <a href="https://wa.me/5492914476665?text=Hola!%20Quiero%20escalar%20mi%20negocio%20con%20una%20web%20profesional"
+          <a href="https://wa.me/5492914476665?text=Hola!%20Vi%20su%20web%20y%20quiero%20una%20web%20profesional%20para%20mi%20negocio"
             class="btn btn-primary btn-large btn-whatsapp" target="_blank" rel="noopener noreferrer">
-            Agendar Consultoría
+            Hablemos por WhatsApp
           </a>
           <a href="#servicio" class="btn btn-secondary btn-large">
             Ver Soluciones
@@ -158,6 +189,9 @@
           <span class="tag best">✅ NetOrbit Studio</span>
           <p class="price-big">$400.000</p>
           <p class="price-subtitle">Inversión Única. Tuyo para siempre.</p>
+          <p style="font-size: var(--text-sm); color: var(--color-text-secondary); margin-bottom: var(--space-4);">
+            Ideal para emprendedores y PyMEs que quieren una base sólida sin pagar una agencia.
+          </p>
           <ul class="pricing-features-good">
             <li>✓ Código 100% profesional</li>
             <li>✓ Listo en 3 semanas</li>
@@ -168,9 +202,13 @@
 
       <!-- Value Breakdown -->
       <div class="value-breakdown reveal-on-scroll delay-100">
-        <h3 style="text-align: center; margin-bottom: var(--space-6); color: var(--color-text-primary);">
+        <h3 style="text-align: center; margin-bottom: var(--space-3); color: var(--color-text-primary);">
           ¿Qué incluye esa inversión?
         </h3>
+        <p
+          style="text-align: center; margin-bottom: var(--space-6); font-size: var(--text-base); color: var(--color-text-secondary);">
+          Este es el valor real de una web profesional bien hecha. Optimizamos el proceso para ofrecértela a $400.000.
+        </p>
         <div class="value-grid">
           <div class="value-item">
             <span class="value-amount">$120k</span>
@@ -264,10 +302,10 @@
 
       <!-- CTA Final con Urgencia -->
       <div class="cta-pricing reveal-on-scroll delay-200">
-        <a href="https://wa.me/5492914476665?text=Hola!%20Me%20interesa%20el%20plan%20Despegue%20Digital.%20Quiero%20saber%20m%C3%A1s."
+        <a href="https://wa.me/5492914476665?text=Hola!%20Vi%20su%20web%20y%20quiero%20una%20web%20profesional%20para%20mi%20negocio"
           class="btn btn-primary btn-large btn-whatsapp" style="width: 100%; max-width: 400px;" target="_blank"
           rel="noopener noreferrer">
-          Agendar Consultoría Gratis
+          Hablemos por WhatsApp
         </a>
 
         <p
@@ -404,13 +442,13 @@
        ============================================ -->
   <section id="contacto" class="cta-section reveal-on-scroll">
     <div class="container">
-      <h2>¿Tenés una idea o emprendimiento y no sabés por dónde empezar?</h2>
+      <h2>¿Tenés una idea o negocio y querés profesionalizar tu presencia digital?</h2>
       <p>
-        Hablemos. Te cuento cómo puedo ayudarte y vemos si tiene sentido trabajar juntos.
+        Hablemos por WhatsApp. Te cuento cómo puedo ayudarte y vemos si tiene sentido trabajar juntos.
       </p>
-      <a href="https://wa.me/5492914476665?text=Hola!%20Tengo%20una%20idea%20y%20quiero%20consultarte"
+      <a href="https://wa.me/5492914476665?text=Hola!%20Vi%20su%20web%20y%20quiero%20una%20web%20profesional%20para%20mi%20negocio"
         class="btn btn-primary btn-large btn-whatsapp" target="_blank" rel="noopener noreferrer">
-        Escribime por WhatsApp
+        Hablemos por WhatsApp
       </a>
     </div>
   </section>
