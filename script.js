@@ -58,30 +58,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ============================================
-// WHATSAPP CLICK TRACKING
+// WHATSAPP CLICK TRACKING & CONVERSIONS
 // ============================================
-const whatsappButtons = document.querySelectorAll('a[href^="https://wa.me"]');
+const whatsappButtons = document.querySelectorAll('.btn-whatsapp, a[href^="https://wa.me"]');
 
 whatsappButtons.forEach(button => {
   button.addEventListener('click', () => {
-    // Track WhatsApp clicks (ready for analytics)
-    console.log('WhatsApp CTA clicked');
-
-    // If you add Google Analytics later:
-    // gtag('event', 'whatsapp_click', {
-    //   'event_category': 'engagement',
-    //   'event_label': button.textContent.trim()
-    // });
-  });
-});
-
-// ============================================
-// CONVERSION TRACKING
-// ============================================
-const whatsappButtons = document.querySelectorAll('.btn-whatsapp');
-
-whatsappButtons.forEach(button => {
-  button.addEventListener('click', function () {
     // Google Ads conversion tracking
     if (typeof gtag !== 'undefined') {
       gtag('event', 'conversion', {
@@ -96,6 +78,8 @@ whatsappButtons.forEach(button => {
     if (typeof fbq !== 'undefined') {
       fbq('track', 'Lead');
     }
+
+    console.log('WhatsApp CTA clicked');
   });
 });
 
