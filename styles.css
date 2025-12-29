@@ -12,32 +12,34 @@
    DESIGN SYSTEM - Minimalist & Professional
    ============================================ */
 :root {
-  /* Colors - NetOrbit Brand Identity (Emerald) */
-  --color-bg: #FFFFFF;
-  --color-bg-alt: #ecfdf5;
-  /* primary-50 */
+  /* Colors - NetOrbit Live Identity (Dark & Electric Blue) */
+  --color-bg: #020617;
+  /* Slate 950 */
+  --color-bg-alt: #0f172a;
+  /* Slate 900 */
 
   /* Text Colors */
-  --color-text-primary: #0f172a;
-  /* dark-900 */
-  --color-text-secondary: #334155;
-  /* dark-700 */
+  --color-text-primary: #f8fafc;
+  /* Slate 50 */
+  --color-text-secondary: #94a3b8;
+  /* Slate 400 */
   --color-text-muted: #64748b;
-  /* dark-500 */
+  /* Slate 500 */
 
   /* Brand Colors */
-  --color-accent: #10b981;
-  /* primary-500 */
-  --color-accent-dark: #059669;
-  /* primary-600 */
-  --color-accent-light: #d1fae5;
-  /* primary-100 */
+  --color-accent: #3b82f6;
+  /* Blue 500 */
+  --color-accent-dark: #2563eb;
+  /* Blue 600 */
+  --color-accent-light: #60a5fa;
+  /* Blue 400 */
+  --color-accent-glow: 0 0 20px rgba(59, 130, 246, 0.5);
 
-  --color-secondary: #3b82f6;
-  /* secondary-500 */
+  --color-secondary: #0ea5e9;
+  /* Sky 500 */
 
-  --color-border: #e2e8f0;
-  /* dark-200 */
+  --color-border: #1e293b;
+  /* Slate 800 */
   --color-success: #10B981;
 
   /* Typography - Single Professional Font */
@@ -45,70 +47,47 @@
 
   /* Font Sizes - Precise Scale */
   --text-xs: 0.75rem;
-  /* 12px */
   --text-sm: 0.875rem;
-  /* 14px */
   --text-base: 1rem;
-  /* 16px */
   --text-lg: 1.125rem;
-  /* 18px */
   --text-xl: 1.25rem;
-  /* 20px */
   --text-2xl: 1.5rem;
-  /* 24px */
   --text-3xl: 1.875rem;
-  /* 30px */
   --text-4xl: 2.25rem;
-  /* 36px */
   --text-5xl: 3rem;
-  /* 48px */
   --text-6xl: 3.75rem;
-  /* 60px */
 
-  /* Spacing - Consistent 8px Grid */
+  /* Spacing */
   --space-1: 0.5rem;
-  /* 8px */
   --space-2: 1rem;
-  /* 16px */
   --space-3: 1.5rem;
-  /* 24px */
   --space-4: 2rem;
-  /* 32px */
   --space-5: 2.5rem;
-  /* 40px */
   --space-6: 3rem;
-  /* 48px */
   --space-8: 4rem;
-  /* 64px */
   --space-10: 5rem;
-  /* 80px */
   --space-12: 6rem;
-  /* 96px */
   --space-16: 8rem;
-  /* 128px */
 
   /* Layout */
   --max-width: 1200px;
   --max-width-narrow: 800px;
   --max-width-text: 680px;
 
-  /* Border Radius - Modern & Soft */
+  /* Border Radius */
   --radius-sm: 0.375rem;
-  /* 6px */
   --radius-md: 0.75rem;
-  /* 12px */
   --radius-lg: 1rem;
-  /* 16px */
   --radius-xl: 1.5rem;
-  /* 24px */
 
-  /* Shadows - Soft & Premium */
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  /* Shadows - Glowy & Dark */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -2px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -4px rgba(0, 0, 0, 0.3);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+  --shadow-glow: 0 0 15px rgba(59, 130, 246, 0.3);
 
-  /* Transitions - Subtle */
+  /* Transitions */
   --transition: 300ms cubic-bezier(0.2, 0.8, 0.2, 1);
   --transition-slow: 500ms cubic-bezier(0.2, 0.8, 0.2, 1);
 }
@@ -160,6 +139,18 @@
   }
 }
 
+@keyframes pulseGlow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.2);
+  }
+
+  50% {
+    box-shadow: 0 0 25px rgba(59, 130, 246, 0.5);
+  }
+}
+
 /* Utility Animations */
 .reveal-on-scroll {
   opacity: 0;
@@ -187,10 +178,11 @@
 
 /* Enhanced Gradient Text */
 .text-gradient {
-  background: linear-gradient(135deg, var(--color-text-primary) 0%, var(--color-accent) 100%);
+  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 50%, #2563eb 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  text-shadow: 0 0 30px rgba(59, 130, 246, 0.3);
 }
 
 /* ============================================
@@ -216,6 +208,11 @@ body {
   line-height: 1.6;
   color: var(--color-text-primary);
   background: var(--color-bg);
+  /* Particle/Star Background Effect */
+  background-image:
+    radial-gradient(circle at 15% 50%, rgba(59, 130, 246, 0.08) 0%, transparent 25%),
+    radial-gradient(circle at 85% 30%, rgba(14, 165, 233, 0.08) 0%, transparent 25%);
+  background-attachment: fixed;
 }
 
 /* ============================================
@@ -281,7 +278,7 @@ section {
 }
 
 /* ============================================
-   NAVIGATION - Minimal & Fixed
+   NAVIGATION - Dark Glass
    ============================================ */
 .navbar {
   position: fixed;
@@ -289,11 +286,13 @@ section {
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(2, 6, 23, 0.7);
+  /* Dark semi-transparent */
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+  border-bottom: 1px solid rgba(59, 130, 246, 0.15);
+  /* Subtle Blue Border */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   transition: var(--transition);
 }
 
@@ -309,6 +308,8 @@ section {
   font-weight: 800;
   color: var(--color-text-primary);
   letter-spacing: -0.03em;
+  text-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+  /* Blue text glow */
 }
 
 .nav-links {
@@ -327,7 +328,8 @@ section {
 }
 
 .nav-links a:hover {
-  color: var(--color-text-primary);
+  color: var(--color-accent);
+  text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
 }
 
 .nav-toggle {
@@ -335,7 +337,7 @@ section {
 }
 
 /* ============================================
-   BUTTONS - Clean & Professional
+   BUTTONS - Glow & Gradient
    ============================================ */
 .btn {
   display: inline-flex;
@@ -374,22 +376,26 @@ section {
 .btn-primary {
   background: var(--color-accent);
   color: white;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
 }
 
 .btn-primary:hover {
   background: var(--color-accent-dark);
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(59, 130, 246, 0.6);
+  /* Stronger glow */
 }
 
 .btn-secondary {
   background: transparent;
   color: var(--color-text-primary);
-  border: 2px solid var(--color-border);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .btn-secondary:hover {
-  border-color: var(--color-text-primary);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.2);
 }
 
 .btn-large {
@@ -400,16 +406,17 @@ section {
 .btn-whatsapp {
   background: #25D366;
   color: white;
+  box-shadow: 0 0 15px rgba(37, 211, 102, 0.3);
 }
 
 .btn-whatsapp:hover {
   background: #20BA5A;
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(37, 211, 102, 0.5);
 }
 
 /* ============================================
-   HERO - Bold & Clear
+   HERO - Space & Depth
    ============================================ */
 .hero {
   padding-top: calc(72px + var(--space-16));
@@ -417,27 +424,28 @@ section {
   min-height: 90vh;
   display: flex;
   align-items: center;
-}
-
-.hero-content {
-  max-width: var(--max-width-text);
+  position: relative;
 }
 
 .hero-label {
   display: inline-block;
   padding: var(--space-1) var(--space-3);
-  background: var(--color-bg-alt);
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.2);
   border-radius: var(--radius-sm);
   font-size: var(--text-sm);
   font-weight: 600;
-  color: var(--color-text-secondary);
+  color: var(--color-accent-light);
   margin-bottom: var(--space-4);
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.1);
 }
 
 .hero h1 {
   margin-bottom: var(--space-4);
+  color: white;
+  text-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
 }
 
 .hero-subtitle {
@@ -447,14 +455,8 @@ section {
   line-height: 1.6;
 }
 
-.hero-cta {
-  display: flex;
-  gap: var(--space-3);
-  flex-wrap: wrap;
-}
-
 /* ============================================
-   SECTIONS - Clean Layout
+   SECTIONS & SECTION HEADERS
    ============================================ */
 .section-header {
   text-align: center;
@@ -464,7 +466,7 @@ section {
 .section-label {
   display: inline-block;
   padding: var(--space-1) var(--space-3);
-  background: var(--color-bg-alt);
+  background: rgba(255, 255, 255, 0.03);
   border-radius: var(--radius-sm);
   font-size: var(--text-xs);
   font-weight: 600;
@@ -477,6 +479,7 @@ section {
 .section-title {
   font-size: var(--text-4xl);
   margin-bottom: var(--space-4);
+  color: var(--color-text-primary);
 }
 
 .section-description {
@@ -487,12 +490,13 @@ section {
 }
 
 /* ============================================
-   CARDS - Minimal & Elegant
+   CARDS - Dark Glass & Hover Glow
    ============================================ */
 .card {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(30, 41, 59, 0.6);
+  /* Slate 800 with opacity */
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.05);
   box-shadow: var(--shadow-sm);
   border-radius: var(--radius-lg);
   padding: var(--space-6);
@@ -500,10 +504,11 @@ section {
 }
 
 .card:hover {
-  border-color: var(--color-accent-light);
+  border-color: var(--color-accent);
   transform: translateY(-5px);
-  box-shadow: var(--shadow-xl);
-  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
+  /* Blue Glow */
+  background: rgba(30, 41, 59, 0.8);
 }
 
 /* ============================================
@@ -525,7 +530,8 @@ section {
 }
 
 .features-list li:hover {
-  background: var(--color-bg-alt);
+  background: rgba(59, 130, 246, 0.05);
+  /* Very subtle blue tint */
 }
 
 .features-list li::before {
@@ -536,29 +542,46 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--color-success);
+  background: var(--color-accent);
+  /* Blue Check */
   color: white;
   border-radius: 50%;
   font-size: var(--text-sm);
   font-weight: 700;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.4);
 }
 
 /* ============================================
-   PRICING
+   PRICING - Highlighted
    ============================================ */
 .pricing-card {
-  background: var(--color-bg);
-  border: 2px solid var(--color-border);
+  background: linear-gradient(180deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.9) 100%);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  /* Blue border by default */
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.1);
   border-radius: var(--radius-lg);
   padding: var(--space-8);
   max-width: 600px;
   margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle glow at top of pricing card */
+.pricing-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
 }
 
 .pricing-label {
   font-size: var(--text-sm);
   font-weight: 600;
-  color: var(--color-text-muted);
+  color: var(--color-accent);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: var(--space-2);
@@ -567,8 +590,9 @@ section {
 .pricing-amount {
   font-size: var(--text-5xl);
   font-weight: 800;
-  color: var(--color-text-primary);
+  color: white;
   margin-bottom: var(--space-2);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
 .pricing-note {
